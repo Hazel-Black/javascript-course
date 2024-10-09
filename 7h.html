@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>7h</title>
+  </head>
+  <body>
+    <script>
+      function convertLength(length, from, to) {
+        if (from === "Miles" && to === "Km") {
+          return `'${length * 1.6} Km'`;
+        } else if (from === "Km" && to === "Miles") {
+          return `'${length / 1.6} Miles'`;
+        } else if (from === "Miles" && to === "Ft") {
+          return `'${length * 5280} Ft'`;
+        } else if (from === "Km" && to === "Ft") {
+          return `'${length * 3281} Ft'`;
+        } else if (from === "Ft" && to === "Km") {
+          return `'${length * 3281} Ft'`;
+        } else if (from === "Ft" && to === "Miles") {
+          return `'${length / 5280} Ft'`;
+        } else if (from === to) {
+          return `'${length} ${from}'`;
+        }
+      }
+      console.log(convertLength(5, "Miles", "Km"));
+      console.log(convertLength(5, "Miles", "Ft"));
+      console.log(convertLength(5, "Km", "Ft"));
+      console.log(convertLength(26400, "Ft", "Miles"));
+    </script>
+  </body>
+</html>
